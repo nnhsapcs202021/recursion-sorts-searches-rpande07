@@ -33,5 +33,30 @@ public class ArrayUtil
       a[i] = a[j];
       a[j] = temp;
    }
+   public static String[] randomStringArray(int length, int numChars)
+   {
+       String[] b = new String[length];
+       
+       
+       
+       for (int i = 0; i < b.length; i++)
+       {
+           b[i] = randomString(numChars);
+       }
+       return b;
+   }
+   private static String randomString(int numChars)
+   {
+       String str = "";
+       String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+           "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
+           "x", "y", "z"};
+           
+       for (int j = 0; j < numChars; j++)
+       {
+           str += alphabet[(int)Math.random() * 26];
+       }
+       return str;
+   }
 }
       
