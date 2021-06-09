@@ -1,3 +1,5 @@
+import java.util.Random;
+
 /**
    This class contains utility methods for array manipulation.
 */  
@@ -51,10 +53,13 @@ public class ArrayUtil
        String[] alphabet = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
            "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w",
            "x", "y", "z"};
+       Random r = new Random();
            
        for (int j = 0; j < numChars; j++)
        {
-           str += alphabet[(int)Math.random() * 26];
+           int x = r.nextInt(26);
+           str += alphabet[x];
+           
        }
        return str;
    }
